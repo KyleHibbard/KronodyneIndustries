@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>KronoDyne Morale Assessment – NICE</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        color: white;
+        background: linear-gradient(180deg, #2b0a3d, #12021c);
+        overflow: hidden;
+        text-align: center;
+    }
+
+    /* Snowflake styling */
+    .snowflake {
+        position: fixed;
+        top: -10px;
+        color: white;
+        font-size: 18px;
+        opacity: 0.8;
+        animation-name: fall;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes fall {
+        0% { transform: translateY(-10px); }
+        100% { transform: translateY(120vh); }
+    }
+
+    /* Center Card */
+    .card {
+        margin: 20% auto 0 auto;
+        padding: 30px 40px;
+        width: 80%;
+        max-width: 500px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(6px);
+        border-radius: 12px;
+        text-shadow: 0 0 6px #ff66ff;
+    }
+
+    .title {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    .subtitle {
+        font-size: 20px;
+        opacity: 0.8;
+    }
+</style>
+</head>
+<body>
+
+<!-- Snowflakes -->
+<div class="snowflake" style="left: 10%; animation-duration: 7s;">❄</div>
+<div class="snowflake" style="left: 25%; animation-duration: 5s;">❄</div>
+<div class="snowflake" style="left: 40%; animation-duration: 6s;">❄</div>
+<div class="snowflake" style="left: 55%; animation-duration: 4s;">❄</div>
+<div class="snowflake" style="left: 70%; animation-duration: 8s;">❄</div>
+<div class="snowflake" style="left: 85%; animation-duration: 6s;">❄</div>
+
+<!-- Main Card -->
+<div class="card">
+    <div class="title">MORALE ASSESSMENT RESULT:</div>
+    <div class="subtitle" style="font-size: 40px; color: #8afff7;">NICE</div>
+    <p>Your positive attitude contributes to KronoDyne's Seasonal Efficiency Goals.</p>
+    <p>Please proceed to your assigned workstation.</p>
+</div>
+
+</body>
+</html>
