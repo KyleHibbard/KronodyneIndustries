@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>You've Been NAUGHTY</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        color: white;
+        background: linear-gradient(180deg, #3d0202, #0d0000);
+        overflow: hidden;
+        text-align: center;
+        box-shadow: inset 0 0 40px rgba(255,0,0,0.2), inset 0 0 80px rgba(0,255,0,0.15);
+    }
+
+    /* Glitch Snowflakes */
+    .snowflake {
+        position: fixed;
+        top: -20px;
+        color: #ff3d3d;
+        font-size: 20px;
+        opacity: 0.7;
+        animation-name: fall;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-duration: 5s;
+    }
+
+    @keyframes fall {
+        0% { transform: translateY(-20px) translateX(0px); }
+        50% { transform: translateY(60vh) translateX(10px); }
+        100% { transform: translateY(120vh) translateX(-10px); }
+    }
+
+    /* Card with glitch effect */
+    .card {
+        margin: 20% auto 0 auto;
+        padding: 30px 40px;
+        width: 80%;
+        max-width: 500px;
+        background: rgba(255, 0, 0, 0.05);
+        border: 2px solid rgba(255, 0, 0, 0.3);
+        backdrop-filter: blur(4px);
+        border-radius: 12px;
+        text-shadow: 0 0 8px #ff0000;
+        animation: glitch 1.5s infinite;
+    }
+
+    .title {
+        font-size: 32px;
+    }
+
+    .subtitle {
+        font-size: 40px;
+        font-weight: bold;
+        color: #ff5555;
+    }
+
+    @keyframes glitch {
+        0% { transform: translate(0,0); }
+        20% { transform: translate(-2px, 2px); }
+        40% { transform: translate(2px, -2px); }
+        60% { transform: translate(-1px, 1px); }
+        80% { transform: translate(1px, -1px); }
+        100% { transform: translate(0,0); }
+    }
+
+    .kronodyne-header {
+        font-size: 28px;
+        letter-spacing: 4px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        color: #d3a0ff;
+        text-shadow:
+            0 0 6px #b300ff,
+            0 0 12px #ff0080,
+            0 0 20px rgba(255,0,255,0.4);
+        animation: glitchText 2s infinite;
+    }
+
+    /* Simulated glitching */
+    @keyframes glitchText {
+        0% { transform: translate(0, 0); }
+        10% { transform: translate(-2px, 1px); color: #ff99ff; }
+        20% { transform: translate(2px, -1px); color: #cc66ff; }
+        30% { transform: translate(-1px, 2px); }
+        40% { transform: translate(0, 0); }
+        70% { transform: translate(1px, -2px); opacity: 0.8; }
+        100% { transform: translate(0, 0); opacity: 1; }
+    }
+
+    .warning-bar {
+        margin: 10px auto 20px auto;
+        padding: 6px 12px;
+        width: 90%;
+        max-width: 500px;
+        font-size: 14px;
+        color: #fff;
+        background: rgba(255, 0, 0, 0.15);
+        border: 1px solid rgba(255, 0, 0, 0.4);
+        text-shadow: 0 0 5px red;
+        animation: warningFlicker 1.8s infinite;
+    }
+
+    @keyframes warningFlicker {
+        0% { opacity: 1; }
+        20% { opacity: 0.4; }
+        25% { opacity: 0.9; }
+        30% { opacity: 0.2; }
+        35% { opacity: 0.7; }
+        40% { opacity: 0.1; }
+        50% { opacity: 1; }
+        100% { opacity: 0.85; }
+    }
+
+    .watermark {
+        position: fixed;
+        bottom: 20px;
+        right: 25px;
+        font-size: 60px;
+        opacity: 0.15;
+        animation: spinSnow 12s linear infinite;
+    }
+
+    @keyframes spinSnow {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+
+    .card {
+        animation: glitch 1.5s infinite, naughtyGlow 3s infinite alternate;
+    }
+
+    @keyframes naughtyGlow {
+        0% { box-shadow: 0 0 10px rgba(255,0,0,0.2); }
+        100% { box-shadow: 0 0 40px rgba(255,0,0,0.7); }
+    }
+</style>
+</head>
+
+<body>
+<div class="kronodyne-header">KRONODYNE INDUSTRIES</div>
+<div class="warning-bar">⚠ SEASONAL MORALE EVALUATION ACTIVE ⚠</div>
+<div class="watermark">❄</div>
+
+
+<!-- Glitch Snowflakes -->
+<div class="snowflake" style="left: 15%;">❄</div>
+<div class="snowflake" style="left: 30%;">❄</div>
+<div class="snowflake" style="left: 50%;">❄</div>
+<div class="snowflake" style="left: 70%;">❄</div>
+<div class="snowflake" style="left: 90%;">❄</div>
+
+<div class="card">
+    <div class="title">THIS YEARS MORALE ASSESSMENT RESULT:</div>
+    <div class="subtitle">NAUGHTY</div>
+    <p>Big Daddy has flagged your behavior as unacceptable.</p>
+    <p>Mandatory Seasonal Correction will be in effect.</p>
+</div>
+
+</body>
+</html>
