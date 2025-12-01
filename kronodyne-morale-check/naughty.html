@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>You've Been NAUGHTY</title>
+<title>You've Been Very NAUGHTY!</title>
 <style>
     body {
         margin: 0;
@@ -46,6 +46,7 @@
         border-radius: 12px;
         text-shadow: 0 0 8px #ff0000;
         animation: glitch 1.5s infinite;
+        animation: glitch 1.5s infinite, naughtyGlow 3s infinite alternate;
     }
 
     .title {
@@ -127,10 +128,6 @@
     @keyframes spinSnow {
         from { transform: rotate(0deg); }
         to { transform: rotate(360deg); }
-    }
-
-    .card {
-        animation: glitch 1.5s infinite, naughtyGlow 3s infinite alternate;
     }
 
     @keyframes naughtyGlow {
