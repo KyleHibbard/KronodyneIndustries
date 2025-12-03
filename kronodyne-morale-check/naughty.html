@@ -15,6 +15,26 @@
         box-shadow: inset 0 0 40px rgba(255,0,0,0.2), inset 0 0 80px rgba(0,255,0,0.15);
     }
 
+    .kronodyne-logo {
+        display: block;
+        margin: 25px auto 10px auto; /* center horizontally */
+        max-width: 220px;            /* adjust as needed */
+        height: auto;                /* keeps proportions */
+        filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
+        animation: logoGlitch 3s infinite;
+    }
+
+    @keyframes logoGlitch {
+        0%   { transform: translate(0, 0); }
+        10%  { transform: translate(-1px, 1px); }
+        12%  { transform: translate(1px, -1px); }
+        15%  { transform: translate(0, 0); }
+        80%  { transform: translate(0, 0); }
+        82%  { transform: translate(1px, 0); }
+        85%  { transform: translate(0, 0); }
+        100% { transform: translate(0, 0); }
+    }
+
     /* Glitch Snowflakes */
     .snowflake {
         position: fixed;
@@ -138,6 +158,7 @@
 </head>
 
 <body>
+<img src="assets/KronodyneLogoForWeb.png" alt="KronoDyne Industries Logo" class="kronodyne-logo">
 <div class="kronodyne-header">KRONODYNE INDUSTRIES</div>
 <div class="warning-bar">⚠ SEASONAL MORALE EVALUATION ACTIVE ⚠</div>
 <div class="watermark">❄</div>
